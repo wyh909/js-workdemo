@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>js实现html模版</title>
+	<style type="text/css">
+	body{font-size: 12px;}
+	.Mtable{
+		width: 100%;
+		border-collapse: collapse;
+		border:1px solid #dd9;
+		margin-bottom: 20px;
+	}
+
+	.Mtable th, .Mtable td{
+		border-right: 1px solid #ddc;
+		border-bottom: 1px solid #ddc;
+		line-height: 25px;
+	}
+	.Mtable td{text-indent: 10px;}
+	</style>
+</head>
+<body>
+<div id="shopitem">
+	<table class="Mtable">
+		<thead>
+			<tr>
+				<th>商家</th>
+				<th>商品名称</th>
+				<th>库存</th>
+				<th>进价</th>
+				<th>销售渠道</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</div>
+<div id="detailitem">
+	<table class="Mtable">
+		<thead>
+			<tr>
+				<th>商家</th>
+				<th>商品名称</th>
+				<th>库存</th>
+				<th>进价</th>
+				<th>销售渠道</th>
+				<th>店铺名称</th>
+				<th>店铺地址</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</div>
+<script type="text/template" id="shoptpl">
+			<tr>
+				<td>$name$</td>
+				<td>$computer.name$</td>
+				<td>$computer.stock_num$</td>
+				<td>$computer.price$</td>
+				<td>$computer.channel$</td>
+			</tr>
+</script>
+<script type="text/template" id="detailtpl">
+			<tr>
+				<td>$name$</td>
+				<td>$computer.name$</td>
+				<td>$computer.stock_num$</td>
+				<td>$computer.price$</td>
+				<td>$computer.channel$</td>
+				<td>$computer.detail.name$</td>
+				<td>$computer.detail.address$</td>
+			</tr>
+</script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="demo.js"></script>
+</body>
+</html>
