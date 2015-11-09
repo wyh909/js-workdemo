@@ -119,7 +119,7 @@
 	//index分类的索引，type第几分类 
 	function getData(obj){
 		var index = obj.index;
-		var d = {
+		var b = {
 			0: {
 				selected: '0',
 				items: [{
@@ -169,8 +169,8 @@
 		// 如果是一级分类change，那么二级分类赋值后，三级也相应的赋值
 		// 如果仅是二级分类，只要给三级分类赋值即可
 		if(obj.type === 0){
-			curItem.secondSelected = d[val]['selected'];
-			curItem.second = d[val]['items'];
+			curItem.secondSelected = b[val]['selected'];
+			curItem.second = b[val]['items'];
 
 			curItem.thirdSelected = c[0]['selected'];
 			curItem.third = c[0]['items'];
